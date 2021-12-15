@@ -16,11 +16,15 @@
 
         <h1>Email List</h1>
 
-        <ul>
-            <li v-for="(email, index) in emailList">
+        <!-- Stampo email solo quando array di email pieno -->
+        <ul v-if="emailList.length === 10">
+
+            <li v-for="email in emailList">
                 {{email}}
             </li>
+
         </ul>
+
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
